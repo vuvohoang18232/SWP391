@@ -35,7 +35,7 @@ $border-radius: 15px;
   button:hover {
     cursor: pointer;
   }
-  //scrollbar of image containers
+  //scrollbar of image-container, slider, wrapper
   .image-container {
     &:hover .image-slider::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, 0.144);
