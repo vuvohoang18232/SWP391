@@ -1,0 +1,120 @@
+.header-container {
+  .banner-container {
+    position: relative;
+    background-color: #9ece9d;
+    height: 17vh;
+    margin-bottom: 30px;
+
+    .logo-image {
+      height: 15vh;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .signin-button {
+      background-color: #00770c;
+      position: absolute;
+      border-radius: 30px;
+      right: 18%;
+      bottom: 15px;
+      width: 120px;
+      height: 40px;
+      font-size: 1.1em;
+
+      &:hover {
+        background-color: #224b26;
+      }
+
+      @media screen and (max-width: 500px) {
+        right: 15px;
+      }
+    }
+  }
+
+  .navigation-container {
+    .navigation-bar {
+      background-color: #85c697 !important;
+
+      @media screen and (min-width: 1000px) {
+        height: 60px;
+      }
+
+      .container {
+        .navbar-brand {
+          color: #525c53;
+          font-weight: 600;
+          font-size: 1.5em;
+          margin: 0;
+
+          &:hover {
+            color: black;
+          }
+        }
+
+        .navbar-collapse {
+          .navbar-nav {
+            @media screen and (min-width: 1000px) {
+              display: flex;
+              width: 80%;
+              justify-content: flex-end;
+            }
+
+            .nav-link {
+              color: #e6ebdb !important;
+              font-size: 1.3em;
+
+              &:hover {
+                color: #13470a !important;
+              }
+
+              @media screen and (min-width: 1000px) {
+                font-style: italic;
+                width: 100px;
+                text-align: center;
+                height: 50px;
+
+                &.active {
+                  background-color: #468c4d;
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
+
+          .book-btn-container {
+            @media screen and (min-width: 1000px) {
+              width: 80px;
+              position: relative;
+            }
+
+            .navbar-brand {
+              font-weight: 600;
+              color: #464646;
+
+              &:hover {
+                color: rgb(0, 0, 0);
+              }
+
+              @media screen and (min-width: 1000px) {
+                background-color: #3cb9c1;
+                font-size: 1.5em;
+                border-radius: 10px;
+                padding: 22px 30px;
+                position: absolute;
+                right: -8px;
+                bottom: -39px;
+                margin: 0;
+
+                &:hover {
+                  background-color: #41a8c7;
+                  color: rgb(0, 0, 0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
