@@ -9,6 +9,7 @@ $border-radius: 15px;
 
 .home-container {
   background-color: $backgroundColor;
+  //section headers
   section {
     .heading {
       text-align: center;
@@ -30,9 +31,36 @@ $border-radius: 15px;
       }
     }
   }
+  //button
   button:hover {
     cursor: pointer;
   }
+  //scrollbar of image containers
+  .image-container {
+    &:hover .image-slider::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.144);
+    }
+    .image-slider {
+      display: flex;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #dde6f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #dde6f1;
+        transition: background-color 2s;
+      }
+    }
+  }
+  //global values end
+
   .section-head {
     width: 100%;
     display: flex;
@@ -61,26 +89,7 @@ $border-radius: 15px;
     flex-direction: column;
     .image-container {
       margin-top: 3%;
-      // scrollbar
-      &:hover .image-slider::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.062);
-      }
       .image-slider {
-        display: flex;
-        overflow-x: scroll;
-
-        &::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-
-        &::-webkit-scrollbar-track {
-          background-color: $backgroundColor;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: $backgroundColor;
-        }
         .image-wrapper {
           flex: 0 0 25%;
           img {
@@ -241,28 +250,7 @@ $border-radius: 15px;
     flex-direction: column;
     .image-container {
       margin-top: 3%;
-      // scrollbar
-      overflow: hidden;
-      &:hover .image-slider::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.062);
-      }
       .image-slider {
-        display: flex;
-        overflow-x: scroll;
-
-        &::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-
-        &::-webkit-scrollbar-track {
-          background-color: $backgroundColor;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: $backgroundColor;
-        }
-
         .image-wrapper {
           flex: 0 0 25%;
           background-color: white;

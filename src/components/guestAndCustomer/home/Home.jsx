@@ -14,7 +14,8 @@ import {
   largepic1,
   largepic2,
 } from "../../../utils/constants";
-import Draggable from "react-draggable";
+// import { Draggable } from "react-beautiful-dnd";
+// import Draggable from "react-draggable";
 
 const Home = () => {
   return (
@@ -41,96 +42,96 @@ const Home = () => {
         <div className="image-container">
           <div className="image-slider">
             {courses.map((image) => (
-              <Draggable key={image.id} axis="x" handle=".image-wrapper">
-                <div style={{ marginLeft: "3%" }} className="image-wrapper">
-                  <div>
-                    <img src={image.src} alt={image.id} />
-                    <div className="desc">
-                      <h1 style={{ textAlign: "left" }}>{image.name}</h1>
-                      <div className="desc-container">
+              // <Draggable axis="x" handle=".image-wrapper">
+              <div
+                key={image.id}
+                style={{ marginLeft: "3%" }}
+                className="image-wrapper"
+              >
+                <div>
+                  <img src={image.src} alt={image.id} />
+                  <div className="desc">
+                    <h1 style={{ textAlign: "left" }}>{image.name}</h1>
+                    <div className="desc-container">
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          fontSize: "90%",
+                        }}
+                      >
                         <div
                           style={{
+                            marginTop: "5%",
+                            textAlign: "left",
                             display: "flex",
-                            flexDirection: "column",
-                            fontSize: "90%",
+                            flexDirection: "row",
                           }}
                         >
-                          <div
-                            style={{
-                              marginTop: "5%",
-                              textAlign: "left",
-                              display: "flex",
-                              flexDirection: "row",
-                            }}
-                          >
-                            <div>Suitable bird type:</div>
-                            <b style={{ width: "40%", marginLeft: "5%" }}>
-                              {image.suitText.join(", ")}
-                            </b>
-                          </div>
-                          <div
-                            style={{
-                              display: "flex",
-                              flexDirection: "row",
-                              justifyContent: "space-between",
-                              marginTop: "5%",
-                            }}
-                          >
-                            <div style={{ alignSelf: "flex-start" }}>
-                              Birds enrolled:
-                            </div>
-                            <div
-                              style={{
-                                display: "flex",
-                                alignItems: "center",
-                                marginRight: "20%",
-                              }}
-                            >
-                              <img
-                                src={pic2}
-                                alt=""
-                                style={{ width: "25px" }}
-                              />
-                              <b style={{ marginLeft: "5px" }}>
-                                {image.enrolledNum}
-                              </b>
-                            </div>
-                          </div>
+                          <div>Suitable bird type:</div>
+                          <b style={{ width: "40%", marginLeft: "5%" }}>
+                            {image.suitText.join(", ")}
+                          </b>
                         </div>
                         <div
                           style={{
                             display: "flex",
-                            justifyContent: "center",
+                            flexDirection: "row",
+                            justifyContent: "space-between",
                             marginTop: "5%",
                           }}
                         >
-                          <p
+                          <div style={{ alignSelf: "flex-start" }}>
+                            Birds enrolled:
+                          </div>
+                          <div
                             style={{
-                              color: "#617a55",
-                              fontWeight: "bolder",
-                              marginRight: "10%",
+                              display: "flex",
+                              alignItems: "center",
+                              marginRight: "20%",
                             }}
                           >
-                            Price tag
-                          </p>
-                          <button
-                            style={{
-                              border: "0px",
-                              borderRadius: "20px",
-                              backgroundColor: "#617a55",
-                              color: "white",
-                              padding: "6px",
-                              width: "100px",
-                            }}
-                          >
-                            Explore more
-                          </button>
+                            <img src={pic2} alt="" style={{ width: "25px" }} />
+                            <b style={{ marginLeft: "5px" }}>
+                              {image.enrolledNum}
+                            </b>
+                          </div>
                         </div>
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          marginTop: "5%",
+                        }}
+                      >
+                        <p
+                          style={{
+                            color: "#617a55",
+                            fontWeight: "bolder",
+                            marginRight: "10%",
+                          }}
+                        >
+                          Price tag
+                        </p>
+                        <button
+                          style={{
+                            border: "0px",
+                            borderRadius: "20px",
+                            backgroundColor: "#617a55",
+                            color: "white",
+                            padding: "6px",
+                            width: "100px",
+                          }}
+                        >
+                          Explore more
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </Draggable>
+              </div>
+              // </Draggable>
             ))}
           </div>
         </div>
