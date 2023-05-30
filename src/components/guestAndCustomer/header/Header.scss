@@ -49,6 +49,7 @@ $green: #80957c;
         padding-left: 5%;
         padding-right: 5%;
         height: 100%;
+        transition: background-color 0.1s linear;
 
         &:hover {
           background-color: #468847;
@@ -106,6 +107,7 @@ $green: #80957c;
     height: 35px;
     font-size: 1.1em;
     color: white;
+    border: 0;
 
     &:hover {
       background-color: #468847;
