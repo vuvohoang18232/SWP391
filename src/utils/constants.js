@@ -114,3 +114,5 @@ export { default as icon4 } from "../assets/image/349554629_776951850590374_4911
 export { default as icon5 } from "../assets/image/349252734_479596974359728_5596993599118262797_n.png";
 export { default as largepic1 } from "../assets/image/Rectangle 12.png";
 export { default as largepic2 } from "../assets/image/Rectangle 13.png";
+
+export { default as logo1 } from "../assets/image/349252733_767865025124137_1990273265293346631_n.png";
