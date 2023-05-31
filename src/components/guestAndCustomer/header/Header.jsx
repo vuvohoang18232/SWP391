@@ -60,7 +60,7 @@ const Header = () => {
                 <li><a href="#about-us">About Us</a></li>
                 <li>
                   <a href="#">Services
-                    <i className="nav-arrdown ti-angle-down"></i>
+                    <li className="nav-arrdown ti-angle-down"></li>
                   </a>
                   <ul className="subnav">
                     <li><a href="#consultation">Consultations</a></li>

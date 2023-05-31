@@ -1,0 +1,109 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header-container {
+  position: relative;
+  background-color: #61dafb;
+  height: 2.3vh;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.header-container .logo-container {
+  display: flex;
+  width: 20%;
+}
+.header-container .logo-container div {
+  width: 50%;
+}
+.header-container .logo-container div p {
+  margin: 0;
+  justify-content: center;
+}
+.header-container .logo-container .logo-text {
+  height: fit-content;
+}
+.header-container .logo-container .logo-image {
+  flex: 0 0 35%;
+}
+.header-container .logo-container .logo-image img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.header-container .nav-container {
+  display: flex;
+  width: 50%;
+}
+.header-container .nav-container .signin-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 5.5px;
+  right: 200px;
+  width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+}
+.header-container .nav-container .signin-button p:hover {
+  color: #617A55;
+}
+@media screen and (max-width: 500px) {
+  .header-container .nav-container .signin-button {
+    right: 15px;
+  }
+}
+.header-container .nav-container .signup-button {
+  background-color: #617A55;
+  position: absolute;
+  border-radius: 30px;
+  top: 5.5px;
+  right: 55px;
+  width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+}
+.header-container .nav-container .signup-button:hover {
+  background-color: #468847;
+}
+@media screen and (max-width: 500px) {
+  .header-container .nav-container .signup-button {
+    right: 15px;
+  }
+}
+.header-container .nav-container .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header-container .nav-container .nav li:hover .subnav {
+  display: block;
+}
+.header-container .nav-container .nav .subnav {
+  display: none;
+  min-width: 100px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 0 10px grey;
+}
+.header-container .nav-container .nav .subnav a {
+  color: black;
+  padding: 0 16px;
+}
+.header-container .nav-container .nav .subnav li:hover { /*Subnav hovering*/
+  background-color: gray;
+  color: black;
+}
+.header-container .nav-container .nav .subnav li {
+  width: 100%; /*để viền xám đầy cho li của subnav*/
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Header.css.map */
