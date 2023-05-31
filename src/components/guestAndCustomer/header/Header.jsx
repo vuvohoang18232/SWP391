@@ -8,13 +8,6 @@ import SignIn from "../signIn/SignIn";
 import SignUp from "../signUp/SignUp";
 
 const Header = () => {
-  const scrollToSection = (sectionId) => {
-    scroll.scrollTo(sectionId, {
-      smooth: true,
-      offset: 40,
-      duration: 500,
-    });
-  };
   const navigate = useNavigate();
 
   const [showSignInForm, setShowSignInForm] = useState(false);
