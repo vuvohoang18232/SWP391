@@ -9,6 +9,10 @@ $green: #80957c;
   flex-direction: row;
   align-items: center;
 
+  .nav-link.active {
+    color: $green;
+  }
+
   .logo-text,
   .nav-link,
   .nav-logo {
