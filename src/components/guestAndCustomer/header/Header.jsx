@@ -1,4 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { RxTriangleDown } from "react-icons/rx";
 import { logo1 } from "../../../utils/constants";
 import "./Header.scss";
@@ -7,7 +8,15 @@ import SignIn from "../signIn/SignIn";
 import SignUp from "../signUp/SignUp";
 
 const Header = () => {
-  // const navigate = useNavigate();
+  const scrollToSection = (sectionId) => {
+    scroll.scrollTo(sectionId, {
+      smooth: true,
+      offset: 40,
+      duration: 500,
+    });
+  };
+  const navigate = useNavigate();
+
   const [showSignInForm, setShowSignInForm] = useState(false);
 
   const toggleSignInForm = () => {
@@ -51,13 +60,16 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <div
+              <Link
+                to="service"
+                smooth={true}
+                duration={500}
                 className="nav-link"
-                style={{ display: "flex", alignItems: "center" }}
+                onClick={() => navigate("/")}
               >
                 Services
                 <RxTriangleDown />
-              </div>
+              </Link>
               <ul className="subnav">
                 <li>
                   <NavLink to="/consultations" className="nav-link">

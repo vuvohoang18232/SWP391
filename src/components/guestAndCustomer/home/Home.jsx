@@ -136,7 +136,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="section-service">
+      <section className="section-service" id="service">
         <div className="heading">
           <h2>OUR SERVICE</h2>
           <div>
