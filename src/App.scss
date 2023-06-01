@@ -1,6 +1,9 @@
 .App {
   background-color: #dde6f1;
-  padding-bottom: 10px;
+  //button
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 .App-logo {

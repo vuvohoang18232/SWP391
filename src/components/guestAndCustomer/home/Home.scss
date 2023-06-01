@@ -31,10 +31,6 @@ $border-radius: 15px;
       }
     }
   }
-  //button
-  button:hover {
-    cursor: pointer;
-  }
   //scrollbar of image-container, slider, wrapper
   .image-container {
     &:hover .image-slider::-webkit-scrollbar-thumb {

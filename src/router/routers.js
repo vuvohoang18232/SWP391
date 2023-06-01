@@ -5,6 +5,7 @@ import Home from "../components/guestAndCustomer/home/Home.jsx";
 import Blog from "../components/guestAndCustomer/blog/Blog.jsx";
 import AboutUs from "../components/guestAndCustomer/aboutUs/AboutUs.jsx";
 import Consultations from "../components/guestAndCustomer/consultations/Consultations.jsx";
+import BirdCourse from "../components/guestAndCustomer/birdCourse/BirdCourse.jsx";
 import Workshop from "../components/guestAndCustomer/workshop/Workshop.jsx";
 import CourseOnline from "../components/guestAndCustomer/courseOnline/CourseOnline.jsx";
 import Contact from "../components/guestAndCustomer/contact/Contact.jsx";
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "consultations",
+        path: "private-consultant",
         element: <Consultations />,
       },
       {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "course-online",
         element: <CourseOnline />,
+      },
+      {
+        path: "bird-course",
+        element: <BirdCourse />,
       },
       {
         path: "blog",

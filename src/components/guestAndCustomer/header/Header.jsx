@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <div>
-      {showSignInForm && <SignIn />}
+      {showSignInForm && <SignIn toggleSignInForm={toggleSignInForm} />}
       {showSignUpForm && <SignUp />}
       <div className="header-container">
         <div style={{ marginLeft: "2%" }}>
@@ -65,18 +65,23 @@ const Header = () => {
               </Link>
               <ul className="subnav">
                 <li>
-                  <NavLink to="/consultations" className="nav-link">
-                    Consultations
-                  </NavLink>
-                </li>
-                <li>
                   <NavLink to="/workshop" className="nav-link">
                     Workshop
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink to="/private-consultant" className="nav-link">
+                    Private Consultant
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink to="/course-online" className="nav-link">
                     Course Online
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/bird-course" className="nav-link">
+                    Bird Course
                   </NavLink>
                 </li>
               </ul>

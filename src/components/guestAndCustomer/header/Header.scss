@@ -1,10 +1,13 @@
 $background-color: #dde6f1;
 $green: #80957c;
+$green-hover: #4d6144;
 
 .header-container {
+  z-index: 1000;
   position: relative;
   background-color: $background-color;
   height: 7vh;
+  min-height: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,7 +59,10 @@ $green: #80957c;
         transition: background-color 0.1s linear;
 
         &:hover {
-          background-color: #468847;
+          // background-color: #468847;
+          .nav-link {
+            color: $green-hover;
+          }
           .subnav {
             display: block;
           }
@@ -69,19 +75,27 @@ $green: #80957c;
         }
         .subnav {
           display: none;
-          background-color: $background-color;
           position: absolute;
           top: 100%;
           left: 0;
           right: 0;
           box-shadow: 0 0 10px grey;
-          .nav-link {
+          line-height: 200%;
+          li {
+            padding: 0;
+            padding-left: 7%;
+            background-color: white;
             width: 100%;
-            cursor: pointer;
             &:hover {
-              background-color: green($color: #000000);
-              color: black;
+              background-color: #468847;
+              .subnav {
+                display: flex;
+              }
             }
+          }
+          .nav-link {
+            color: black;
+            cursor: pointer;
           }
         }
       }
@@ -94,8 +108,9 @@ $green: #80957c;
     height: 35px;
     font-size: 1.1em;
     color: $green;
+    cursor: pointer;
 
-    p:hover {
+    &:hover {
       color: #617a55;
     }
 
@@ -112,6 +127,7 @@ $green: #80957c;
     font-size: 1.1em;
     color: white;
     border: 0;
+    cursor: pointer;
 
     &:hover {
       background-color: #468847;
