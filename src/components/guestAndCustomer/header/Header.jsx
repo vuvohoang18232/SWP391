@@ -1,16 +1,15 @@
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { NavLink, useNavigate } from "react-router-dom";
-import { logo1 } from "../../../utils/constants";
-import "./Header.scss";
 import { useState } from "react";
+import { RxTriangleDown } from "react-icons/rx";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
+import { logo1 } from "../../../utils/constants";
 import SignIn from "../signIn/SignIn";
 import SignUp from "../signUp/SignUp";
+import "./Header.scss";
 
 const Header = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
   const [showSignInForm, setShowSignInForm] = useState(false);
 
   const toggleSignInForm = () => {
@@ -23,58 +22,86 @@ const Header = () => {
   };
 
   return (
-    <div>
-        {showSignInForm && (
-              <SignIn/>
-        )}
-        {showSignUpForm && (
-              <SignUp/>
-        )}
-      <div className="header-container">
-            <div className="logo-container">
-              <div className="logo-image"><img src={ logo1 } alt="page logo"/></div>
-              <div className="logo-text">
-                <p>BIRD</p>
-                <p>TRADING</p>
-                <p>CENTER</p>
+      <div>
+        {showSignInForm && <SignIn toggleSignInForm={toggleSignInForm}/>}
+        {showSignUpForm && <SignUp/>}
+        <div className="header-container">
+          <div style={{ marginLeft: "1%" }}>
+            <NavLink to="/" end className="nav-logo">
+              <div className="logo-container">
+                <div className="logo-image">
+                  <img src={logo1} alt="page logo" />
+                </div>
+                <div className="logo-text">
+                  <p>BIRD</p>
+                  <p>TRADING</p>
+                  <p>CENTER</p>
+                </div>
               </div>
-            </div>
-            {/*<button className="nav-link"><a><NavLink to="/home">*/}
-            {/*  Home*/}
-            {/*</NavLink></a></button>*/}
-            {/*<button className="nav-link"><a><NavLink to="/about us">*/}
-            {/*  About Us*/}
-            {/*</NavLink></a></button>*/}
-            {/*<button className="nav-link"><a><NavLink to="/service">*/}
-            {/*  Service*/}
-            {/*</NavLink></a></button>*/}
-            {/*<button className="nav-link"><a><NavLink to="/blog">*/}
-            {/*  Blog*/}
-            {/*</NavLink></a></button>*/}
-            {/*<button className="nav-link"><a><NavLink to="/contact">*/}
-            {/*  Contact*/}
-            {/*</NavLink></a></button>*/}
-            <div className="nav-container">
-              <ul className="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li>
-                  <a href="#">Services
-                    <li className="nav-arrdown ti-angle-down"></li>
-                  </a>
-                  <ul className="subnav">
-                    <li><a href="#consultation">Consultations</a></li>
-                    <li><a href="#work-shop">Workshop</a></li>
-                    <li><a href="#course-online">Course Online</a></li>
-                  </ul>
-                </li>
-                <button className="signin-button" onClick={toggleSignInForm}><p>Sign In</p></button>
-                <button className="signup-button" onClick={toggleSignUpForm}>Sign Up</button>
-              </ul>
-            </div>
+            </NavLink>
+          </div>
+          <div className="nav-container" >
+            <ul className="nav">
+              <li>
+                <NavLink to="/home" className="nav-link">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about-us" className="nav-link">
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <Link
+                    to="service"
+                    smooth={true}
+                    duration={500}
+                    className="nav-link"
+                    onClick={() => navigate("/")}
+                >
+                  Services
+                  <RxTriangleDown />
+                </Link>
+                <ul className="subnav">
+                  <li>
+                    <NavLink to="/consultations" className="nav-link">
+                      Consultations
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/workshop" className="nav-link">
+                      Workshop
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/course-online" className="nav-link">
+                      Course Online
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <NavLink to="/blog" className="nav-link">
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className="nav-link">
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+          <button className="login-button" onClick={toggleSignInForm}>
+            <p>Login</p>
+          </button>
 
+          <button className="signup-button" onClick={toggleSignUpForm}>
+            Sign Up
+          </button>
+        </div>
       </div>
-    </div>
   );
 };
 export default Header;

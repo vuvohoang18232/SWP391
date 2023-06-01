@@ -1,109 +1,117 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: poppins;
-  text-decoration: none;
-  list-style: none;
-}
-
 .header-container {
   position: relative;
-  background-color: #61dafb;
-  height: 2.3vh;
-  margin-bottom: 30px;
+  background-color: #dde6f1;
+  height: 7vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+.header-container .nav-link.active {
+  color: #617a55;
+}
+.header-container .logo-text,
+.header-container .nav-link,
+.header-container .nav-logo {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 .header-container .logo-container {
   display: flex;
   width: 20%;
 }
-.header-container .logo-container div {
-  width: 50%;
-}
-.header-container .logo-container div p {
-  margin: 0;
-  justify-content: center;
-}
-.header-container .logo-container .logo-text {
-  height: fit-content;
-}
 .header-container .logo-container .logo-image {
-  flex: 0 0 35%;
+  flex: 0 0 100%;
 }
 .header-container .logo-container .logo-image img {
+  height: 100%;
   width: 100%;
   object-fit: contain;
   object-position: center;
 }
 .header-container .nav-container {
-  display: flex;
   width: 50%;
-}
-.header-container .nav-container .signin-button {
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 5.5px;
-  right: 200px;
-  width: 100px;
-  height: 35px;
-  font-size: 1.1em;
-}
-.header-container .nav-container .signin-button p:hover {
-  color: #617A55;
-}
-@media screen and (max-width: 500px) {
-  .header-container .nav-container .signin-button {
-    right: 15px;
-  }
-}
-.header-container .nav-container .signup-button {
-  background-color: #617A55;
-  position: absolute;
-  border-radius: 30px;
-  top: 5.5px;
-  right: 55px;
-  width: 100px;
-  height: 35px;
-  font-size: 1.1em;
-}
-.header-container .nav-container .signup-button:hover {
-  background-color: #468847;
-}
-@media screen and (max-width: 500px) {
-  .header-container .nav-container .signup-button {
-    right: 15px;
-  }
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .header-container .nav-container .nav {
+  height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+}
+.header-container .nav-container .nav li {
+  position: relative;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+}
+.header-container .nav-container .nav li:hover .nav-link {
+  color: #4d6144;
 }
 .header-container .nav-container .nav li:hover .subnav {
   display: block;
 }
-.header-container .nav-container .nav .subnav {
+.header-container .nav-container .nav li .nav-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-container .nav-container .nav li .subnav {
   display: none;
-  min-width: 100px;
-  background-color: white;
-  position: relative;
+  background-color: #dde6f1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   box-shadow: 0 0 10px grey;
 }
-.header-container .nav-container .nav .subnav a {
-  color: black;
-  padding: 0 16px;
-}
-.header-container .nav-container .nav .subnav li:hover { /*Subnav hovering*/
-  background-color: gray;
-  color: black;
-}
-.header-container .nav-container .nav .subnav li {
-  width: 100%; /*để viền xám đầy cho li của subnav*/
+.header-container .nav-container .nav li .subnav .nav-link {
+  width: 100%;
   cursor: pointer;
+}
+.header-container .nav-container .nav li .subnav .nav-link:hover {
+  color: #4d6144;
+}
+.header-container .login-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  min-width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+  color: #617a55;
+  cursor: pointer;
+}
+.header-container .login-button:hover {
+  color: #617a55;
+}
+@media screen and (max-width: 500px) {
+  .header-container .login-button {
+    right: 15px;
+  }
+}
+.header-container .signup-button {
+  background-color: #617a55;
+  border-radius: 30px;
+  min-width: 100px;
+  height: 35px;
+  font-size: 1.1em;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+.header-container .signup-button:hover {
+  background-color: #468847;
+}
+@media screen and (max-width: 500px) {
+  .header-container .signup-button {
+    right: 15px;
+  }
 }
 
 /*# sourceMappingURL=Header.css.map */
